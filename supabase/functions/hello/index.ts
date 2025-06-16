@@ -9,6 +9,7 @@ console.log("Hello from Functions!");
 
 Deno.serve(async (req) => {
   const secretMessage = Deno.env.get("SECRET_MESSAGE") || "No secret found";
+  console.log("SECRET_MESSAGE_FROM_ENV", secretMessage);
   console.log("SECRET_MSG_FROM_ENV", secretMessage);
 
   const responseData = {
